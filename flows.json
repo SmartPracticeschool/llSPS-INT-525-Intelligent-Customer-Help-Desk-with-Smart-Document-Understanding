@@ -13,9 +13,9 @@
         "name": "",
         "label": "",
         "group": "a362d2d2.2cb01",
-        "order": 1,
-        "width": 12,
-        "height": 2,
+        "order": 5,
+        "width": 0,
+        "height": 0,
         "options": [
             {
                 "label": "Enter your Input",
@@ -62,9 +62,9 @@
         "type": "ui_text",
         "z": "d2436664.c8abf8",
         "group": "a362d2d2.2cb01",
-        "order": 2,
-        "width": 12,
-        "height": 1,
+        "order": 3,
+        "width": 0,
+        "height": 0,
         "name": "",
         "label": "You",
         "format": "{{msg.payload}}",
@@ -129,9 +129,9 @@
         "type": "ui_text",
         "z": "d2436664.c8abf8",
         "group": "e2dd2c38.d79ad",
-        "order": 1,
-        "width": 12,
-        "height": 1,
+        "order": 3,
+        "width": 7,
+        "height": 5,
         "name": "",
         "label": "Bot",
         "format": "{{msg.payload}}",
@@ -148,7 +148,7 @@
         "tab": "89b3b414.4293c8",
         "order": 1,
         "disp": true,
-        "width": "12",
+        "width": 7,
         "collapse": true
     },
     {
@@ -159,7 +159,7 @@
         "tab": "89b3b414.4293c8",
         "order": 2,
         "disp": false,
-        "width": "12",
+        "width": "7",
         "collapse": false
     },
     {
