@@ -1,18 +1,18 @@
 [
     {
-        "id": "d2436664.c8abf8",
+        "id": "59f39e6b.f710b",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "fe48cdd8.1f178",
+        "id": "b3427e47.2623e",
         "type": "ui_form",
-        "z": "d2436664.c8abf8",
+        "z": "59f39e6b.f710b",
         "name": "",
         "label": "",
-        "group": "a362d2d2.2cb01",
+        "group": "8bf727f1.beb018",
         "order": 5,
         "width": 0,
         "height": 0,
@@ -36,14 +36,14 @@
         "y": 160,
         "wires": [
             [
-                "5cead145.cc5e8"
+                "caa4b318.e11bc"
             ]
         ]
     },
     {
-        "id": "5cead145.cc5e8",
+        "id": "caa4b318.e11bc",
         "type": "function",
-        "z": "d2436664.c8abf8",
+        "z": "59f39e6b.f710b",
         "name": "",
         "func": "msg.payload = msg.payload.text;\nreturn msg",
         "outputs": 1,
@@ -52,16 +52,16 @@
         "y": 220,
         "wires": [
             [
-                "f4e65e02.8a491",
-                "a2382789.3f5b88"
+                "f720531d.9624b",
+                "7ce24883.508aa8"
             ]
         ]
     },
     {
-        "id": "f4e65e02.8a491",
+        "id": "f720531d.9624b",
         "type": "ui_text",
-        "z": "d2436664.c8abf8",
-        "group": "a362d2d2.2cb01",
+        "z": "59f39e6b.f710b",
+        "group": "8bf727f1.beb018",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -74,9 +74,9 @@
         "wires": []
     },
     {
-        "id": "a2382789.3f5b88",
+        "id": "7ce24883.508aa8",
         "type": "watson-conversation-v1",
-        "z": "d2436664.c8abf8",
+        "z": "59f39e6b.f710b",
         "name": "Customer Care",
         "workspaceid": "99360124-56dc-4ec4-8474-639692373c7b",
         "multiuser": false,
@@ -89,14 +89,14 @@
         "y": 160,
         "wires": [
             [
-                "ed42735c.3cd93"
+                "648d5bdf.397e14"
             ]
         ]
     },
     {
-        "id": "ed42735c.3cd93",
+        "id": "648d5bdf.397e14",
         "type": "function",
-        "z": "d2436664.c8abf8",
+        "z": "59f39e6b.f710b",
         "name": "",
         "func": "\nmsg.payload.text=\"\";\nif(msg.payload.context.webhook_result_1)\n{\n    for(var i in msg.payload.context.webhook_result_1.results){\n        msg.payload.text = msg.payload.text +\"\\n\" + msg.payload.context.webhook_result_1.results[i].text;\n    }\n    msg.payload = msg.payload.text;\n}\nelse{\n    msg.payload = msg.payload.output.text[0];\n    }\nreturn msg;",
         "outputs": 1,
@@ -105,15 +105,15 @@
         "y": 218,
         "wires": [
             [
-                "1574ee55.7798c2",
-                "9a1334.259fdcd"
+                "a0c29b71.ba4568",
+                "f9e0587b.661558"
             ]
         ]
     },
     {
-        "id": "1574ee55.7798c2",
+        "id": "a0c29b71.ba4568",
         "type": "debug",
-        "z": "d2436664.c8abf8",
+        "z": "59f39e6b.f710b",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -125,10 +125,10 @@
         "wires": []
     },
     {
-        "id": "9a1334.259fdcd",
+        "id": "f9e0587b.661558",
         "type": "ui_text",
-        "z": "d2436664.c8abf8",
-        "group": "e2dd2c38.d79ad",
+        "z": "59f39e6b.f710b",
+        "group": "659d8b6f.cd1a14",
         "order": 3,
         "width": 7,
         "height": 5,
@@ -141,29 +141,29 @@
         "wires": []
     },
     {
-        "id": "a362d2d2.2cb01",
+        "id": "8bf727f1.beb018",
         "type": "ui_group",
         "z": "",
         "name": "Input",
-        "tab": "89b3b414.4293c8",
+        "tab": "f5b30e37.bdf7f",
         "order": 1,
         "disp": true,
         "width": 7,
         "collapse": true
     },
     {
-        "id": "e2dd2c38.d79ad",
+        "id": "659d8b6f.cd1a14",
         "type": "ui_group",
         "z": "",
         "name": "Output",
-        "tab": "89b3b414.4293c8",
+        "tab": "f5b30e37.bdf7f",
         "order": 2,
         "disp": false,
         "width": "7",
         "collapse": false
     },
     {
-        "id": "89b3b414.4293c8",
+        "id": "f5b30e37.bdf7f",
         "type": "ui_tab",
         "z": "",
         "name": "Customer Care Helpdesk",
